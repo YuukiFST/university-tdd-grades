@@ -77,3 +77,13 @@ Pega a media de um aluno e enquadra numa faixa. Tambem gera relatorio da turma (
 | Turma                   | Turma lotada dispara `TurmaLotadaException`                       |
 | Media                   | Calcular media sem nota nenhuma dispara `IllegalStateException`   |
 | ClassificadorDesempenho | Pedir melhor aluno de turma vazia dispara `IllegalStateException` |
+
+## Cenarios de teste
+
+No total, foram escritos 53 testes organizados em nested classes. Cada metodo
+testavel tem ao menos um teste de caminho feliz e um de excecao. Os nomes seguem
+o padrao deve[Acao]Quando[Condicao].
+
+Os testes estao distribuidos em 4 classes: AlunoTest (13 testes),
+TurmaTest (14 testes), MediaTest (12 testes) e
+ClassificadorDesempenhoTest (14 testes).
