@@ -47,6 +47,11 @@ public class Aluno {
         return !notas.isEmpty();
     }
 
+    @Override
+    public String toString() {
+        return "Aluno{nome='" + nome + "', matricula='" + matricula + "', notas=" + notas.size() + "}";
+    }
+
     private void validarCampoObrigatorio(String valor, String campo) {
         if (valor == null || valor.isBlank()) {
             throw new IllegalArgumentException(campo + " nao pode ser nulo ou vazio");
