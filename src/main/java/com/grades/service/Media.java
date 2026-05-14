@@ -17,6 +17,9 @@ public class Media {
 
     public double calcularMediaPonderada(Aluno aluno, double[] pesos) {
         validarAlunoComNotas(aluno);
+        if (pesos == null) {
+            throw new IllegalArgumentException("Array de pesos nao pode ser nulo");
+        }
 
         List<Double> notas = aluno.getNotas();
         if (pesos.length != notas.size()) {
