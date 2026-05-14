@@ -34,10 +34,7 @@ public class Turma {
             throw new TurmaLotadaException(
                     "Turma '" + nome + "' atingiu a capacidade maxima de " + capacidadeMaxima + " alunos");
         }
-        if (buscarAluno(aluno.getMatricula()).isPresent()) {
-            throw new IllegalArgumentException(
-                    "Aluno com matricula '" + aluno.getMatricula() + "' ja esta na turma");
-        }
+        validarMatriculaUnica(aluno);
         alunos.add(aluno);
     }
 
@@ -46,6 +43,13 @@ public class Turma {
                 .orElseThrow(() -> new AlunoNaoEncontradoException(
                         "Aluno com matricula '" + matricula + "' nao encontrado na turma"));
         alunos.remove(aluno);
+    }
+
+    private void validarMatriculaUnica(Aluno aluno) {
+        if (buscarAluno(aluno.getMatricula()).isPresent()) {
+            throw new IllegalArgumentException(
+                    "Aluno com matricula '" + aluno.getMatricula() + "' ja esta na turma");
+        }
     }
 
     public Optional<Aluno> buscarAluno(String matricula) {
