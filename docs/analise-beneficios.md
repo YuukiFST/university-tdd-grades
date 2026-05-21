@@ -38,3 +38,9 @@ Trocar a estrutura interna da `Turma` foi um bom exemplo. Mudamos a forma como o
 Nomes de teste fazem diferença. `deveCalcularMediaPonderada` conta o que ta acontecendo. `testMedia2` nao diz nada pra ninguem. Quando voce trata os testes como documentacao, eles ficam uteis de verdade.
 
 O esquema de pair programming funcionou bem. Um escrevia o teste, o outro fazia passar. Isso manteve o ciclo TDD rodando certinho e evitou que alguem pulasse a etapa do Red so pra ir mais rapido.
+
+### Exemplo pratico do comparativo
+
+Na implementacao do metodo `calcularMediaPonderada`, o teste forcou a criacao da validacao de pesos antes mesmo do calculo existir. Sem TDD, essa validacao seria adicionada apenas se alguem lembrasse ou quando um bug aparecesse em producao. O teste `deveLancarExcecaoQuandoSomaPesosZero` garantiu que o sistema trata divisao por zero desde o inicio.
+
+Outro exemplo: o `ClassificadorDesempenho` nasceu com injecao de dependencia do `Media` porque o teste precisava passar um `Media` mockado. Sem TDD, provavelmente teriamos um `new Media()` dentro do construtor, acoplando as classes e dificultando testes futuros.
