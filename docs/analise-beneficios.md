@@ -44,3 +44,12 @@ O esquema de pair programming funcionou bem. Um escrevia o teste, o outro fazia 
 Na implementacao do metodo `calcularMediaPonderada`, o teste forcou a criacao da validacao de pesos antes mesmo do calculo existir. Sem TDD, essa validacao seria adicionada apenas se alguem lembrasse ou quando um bug aparecesse em producao. O teste `deveLancarExcecaoQuandoSomaPesosZero` garantiu que o sistema trata divisao por zero desde o inicio.
 
 Outro exemplo: o `ClassificadorDesempenho` nasceu com injecao de dependencia do `Media` porque o teste precisava passar um `Media` mockado. Sem TDD, provavelmente teriamos um `new Media()` dentro do construtor, acoplando as classes e dificultando testes futuros.
+
+## Metricas do projeto
+
+- 53 testes automatizados
+- 4 classes de dominio, 3 exceptions
+- 17 metodos testaveis
+- 5 regras de negocio validadas
+- Cobertura: 100% das classes de dominio possuem testes
+- Todos os 53 testes passam com `mvn test`
