@@ -4,8 +4,11 @@ Projeto da disciplina de Teste de Software. Um sistema de notas feito em Java se
 
 ## Integrantes
 
-- Fausto Yuuki
-- Rafael Pereira
+- Fausto Yuuki (YuukiFST)
+- Rafael Pereira (RafaelPMarquesP)
+- Tiago Ferraz (tiaguer4)
+- Lucas Martins Ojeda (lucasmartinsojeda)
+- Murilo Kan (liloyakuza)
 
 ## O que faz
 
